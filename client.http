@@ -1,0 +1,35 @@
+###
+POST http://127.0.0.1:8000/snippets/
+Content-Type: application/json
+
+{
+    "title": "",
+    "code": "foo = \"bar\"\n",
+    "linenos": false,
+    "language": "java",
+    "style": "friendly"
+}
+
+###
+GET http://127.0.0.1:8000/snippets/2.json
+
+###
+PUT http://127.0.0.1:8000/snippets/1.json
+Content-Type: application/json
+
+{
+    "title": "Hell tto",
+    "code": "foo = \"bar\"\n",
+    "linenos": true
+}
+
+
+###
+GET http://127.0.0.1:8000/snippets/2.json
+
+###
+GET http://127.0.0.1:8000/snippets/
+
+
+###
+DELETE  http://127.0.0.1:8000/snippets/1.json
